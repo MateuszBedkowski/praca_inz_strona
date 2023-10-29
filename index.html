@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Strona do pobierania plików</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+            <div class="linux">
+                <button class="download-button linux-button">Pobierz plik (Linux)</button>
+                <h2>Instrukcje dla Linux:</h2>
+                <p>Tutaj umieść instrukcje dotyczące pobierania pliku na Linuxie.</p>
+                <input type="text" value="sudo apt update" disabled/>
+            </div>
+            <div class="windows">
+                <button class="download-button windows-button">Pobierz plik (Windows)</button>
+                <h2>Instrukcje dla Windows:</h2>
+                <p>Tutaj umieść instrukcje dotyczące pobierania pliku na Windowsie.</p>
+                <button class="copy-button" onclick="copyToClipboard('komenda_windows')">Kopiuj komendę</button>
+            </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

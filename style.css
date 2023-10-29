@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.linux,
+.windows {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.linux {
+    align-items: start;
+    justify-content: start;
+    
+}
+
+.windows {
+    align-items: start;
+}
+
+.linux-button {
+    background-color: #44CC44;
+    float: left;
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+    width: 250px;
+    color: #000;
+}
+
+.windows-button {
+    background-color: #0074CC;
+    float: right;
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+    width: 250px;
+}
+
+/* .instructions { 
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+.download-buttons {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.download-button {
+    margin: 10px;
+    padding: 30px 60px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.linux-button {
+    background-color: #44CC44;
+    float: left;
+}
+.windows-button {
+    background-color: #0074CC;
+    float: right;
+} */
+
