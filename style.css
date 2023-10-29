@@ -1,12 +1,14 @@
 body {
+    background: url("./Resources/wallpaper.jpg");
     font-family: Arial, sans-serif;
+    color: #FFF;
 }
 .container {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: start;
     justify-content: center;
-    height: 100vh;
+    margin-top: 150px;
 }
 .linux,
 .windows {
@@ -32,8 +34,9 @@ body {
     padding: 20px;
     border-radius: 5px;
     border: none;
-    width: 250px;
-    color: #000;
+    width: 300px;
+    cursor: pointer;
+    font-size: large;
 }
 
 .windows-button {
@@ -42,37 +45,72 @@ body {
     padding: 20px;
     border-radius: 5px;
     border: none;
-    width: 250px;
+    width: 300px;
+    cursor: pointer;
+    font-size: large;
 }
 
-/* .instructions { 
-    width: 100%;
-    padding: 20px;
+.images {
+    width: 110px;
+    height: 110px;
+    padding: 20px 50px 0px 50px;
+}
+
+.photos {
     display: flex;
     flex-direction: row;
-    justify-content: start;
-}
-.download-buttons {
-    width: 50%;
-    display: flex;
-    align-items: center;
     justify-content: space-around;
 }
-.download-button {
-    margin: 10px;
-    padding: 30px 60px;
+
+.linux-script {
+    float: left;
+    padding: 10px;
+    border-radius: 5px;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
-    color: #fff;
 }
 
-.linux-button {
-    background-color: #44CC44;
+.ubuntu{
+    background-color: #f88b24;
+}
+
+.arch {
+    background-color: #8bcdff;
+}
+
+.fedora {
+    background-color: #55a2dd;
+}
+
+.windows-script {
     float: left;
-}
-.windows-button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
     background-color: #0074CC;
-    float: right;
-} */
+    color: #FFF;
+}
 
+.file-span {
+    margin-left: 10px;
+}
+
+.linux-instructions {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #b3b3b3;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: rgba(120,150,000, 0.3);
+}
+
+.windows-instructions {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #b3b3b3;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: rgba(120,150,200, 0.3);
+    
+}

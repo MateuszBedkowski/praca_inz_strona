@@ -1,25 +1,71 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>Strona do pobierania plików</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body>
+    <div class="photos">
+        <img src="./Resources/arch-logo.png" class="images" alt="Failed to load arch logo">
+        <img src="./Resources/ubuntu-logo.png" class="images" alt="Failed to load ubuntu logo">
+        <img src="./Resources/debian-logo.png" class="images" alt="Failed to load debian logo">
+        <img src="./Resources/fedora-logo.png" class="images" alt="Failed to load fedora logo">
+        <img src="./Resources/windows-logo.png" class="images" alt="Failed to load windows logo">
+    </div>
     <div class="container">
-            <div class="linux">
-                <button class="download-button linux-button">Pobierz plik (Linux)</button>
-                <h2>Instrukcje dla Linux:</h2>
-                <p>Tutaj umieść instrukcje dotyczące pobierania pliku na Linuxie.</p>
-                <input type="text" value="sudo apt update" disabled/>
+        <div class="linux">
+            <a href="./Files/linux">
+                <button class="linux-button">&#128039; <span class="file-span">Pobierz plik</span></button>
+            </a>
+            <h2>Instrukcje dla Linux</h2>
+            <div class="linux-instructions">
+                <p>Zanim uruchomisz plik pobierz i uruchom odpowiedni skrypt, który przygotuje środowisko, a następnie
+                    wykona pobrany plik.</p>
+                <p>Instrukcja:</p>
+                <ol>
+                    <li>pobierz plik &#128039;</li>
+                    <li>pobierz odpowiedni skrypt</li>
+                    <li>uruchom skrypt</li>
+                </ol>
+                <h4>apt - Ubuntu / Debian</h4>
+                <a href="/Files/ubuntu_debian.sh">
+                    <button class="linux-script ubuntu">Pobierz skrypt</button>
+                </a>
+                <h4>pacman - Arch</h4>
+                <a href="/Files/arch.sh">
+                    <button class="linux-script arch">Pobierz skrypt</button>
+                </a>
+                <h4>dnf - Fedora</h4>
+                <a href="/Files/fedora.sh">
+                    <button class="linux-script fedora">Pobierz skrypt</button>
+                </a>
             </div>
-            <div class="windows">
-                <button class="download-button windows-button">Pobierz plik (Windows)</button>
-                <h2>Instrukcje dla Windows:</h2>
-                <p>Tutaj umieść instrukcje dotyczące pobierania pliku na Windowsie.</p>
-                <button class="copy-button" onclick="copyToClipboard('komenda_windows')">Kopiuj komendę</button>
+        </div>
+        <div class="windows">
+            <a href="./Files/windows.exe">
+                <button class="windows-button" download>&#x1FA9F; <span class="file-span">Pobierz plik</span></button>
+            </a>
+            <h2>Instrukcje dla Windows</h2>
+            <div class="windows-instructions">
+                <p>Zanim uruchomisz plik pobierz i uruchom skrypt, który przygotuje środowisko, a następnie wykona
+                    pobrany
+                    plik.</p>
+                <p>Instrukcja:</p>
+                <ol>
+                    <li>pobierz plik &#x1FA9F;</li>
+                    <li>pobierz skrypt</li>
+                    <li>uruchom skrypt</li>
+                </ol>
+                <a href="./Files/windows.ps1">
+                    <button class="windows-script"> Pobierz skrypt</button>
+                </a>
             </div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>
