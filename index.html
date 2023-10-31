@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <title>VulnAgent</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <style>
+    body {
+      font-family: "Audiowide", sans-serif;
+    }
+    </style>
 </head>
 
 <body>
@@ -26,27 +32,30 @@
                     wykona pobrany plik.</p>
                 <p>Instrukcja:</p>
                 <ol>
-                    <li>pobierz plik &#128039;</li>
-                    <li>pobierz odpowiedni skrypt</li>
-                    <li>uruchom skrypt</li>
+                    <li>Pobierz plik &#128039;</li>
+                    <li>Pobierz odpowiedni skrypt</li>
+                    <li>Uruchom skrypt</li>
                 </ol>
-                <h4>apt - Ubuntu / Debian</h4>
-                <a href="/Files/ubuntu_debian.sh">
-                    <button class="linux-script ubuntu">Pobierz skrypt</button>
-                </a>
-                <h4>pacman - Arch</h4>
-                <a href="/Files/arch.sh">
-                    <button class="linux-script arch">Pobierz skrypt</button>
-                </a>
-                <h4>dnf - Fedora</h4>
-                <a href="/Files/fedora.sh">
-                    <button class="linux-script fedora">Pobierz skrypt</button>
-                </a>
+            
+                <div class="btn-group" style="width:100%">
+                    
+                    <a href="/Files/ubuntu_debian.sh">
+                        <button class="linux-script ubuntu">Pobierz skrypt <br> Ubuntu/Debian </button>
+                    </a>
+                    
+                    <a href="/Files/arch.sh">
+                        <button class="linux-script arch">Pobierz skrypt <br> Arch </button>
+                    </a>
+                    
+                    <a href="/Files/fedora.sh">
+                        <button class="linux-script fedora">Pobierz skrypt <br> Fedora </button>
+                    </a>
+                  </div>
             </div>
         </div>
         <div class="windows">
             <a href="./Files/windows.exe">
-                <button class="windows-button" download>&#x1FA9F; <span class="file-span">Pobierz plik</span></button>
+                <button class="windows-button" download>&#128187; <span class="file-span">Pobierz plik</span></button>
             </a>
             <h2>Instrukcje dla Windows</h2>
             <div class="windows-instructions">
@@ -55,12 +64,12 @@
                     plik.</p>
                 <p>Instrukcja:</p>
                 <ol>
-                    <li>pobierz plik &#x1FA9F;</li>
-                    <li>pobierz skrypt</li>
-                    <li>uruchom skrypt</li>
+                    <li>Pobierz plik &#128187;</li>
+                    <li>Pobierz skrypt</li>
+                    <li>Uruchom skrypt</li>
                 </ol>
                 <a href="./Files/windows.ps1">
-                    <button class="windows-script"> Pobierz skrypt</button>
+                    <button class="windows-script"> Pobierz skrypt <br> Windows </button>
                 </a>
             </div>
         </div>

@@ -1,5 +1,5 @@
 body {
-    background: url("./Resources/background.jpg");
+    background: url("./Resources/background.jpg");    /* background: no-repeat center/100% url("./Resources/background.jpg"); */
     font-family: Arial, sans-serif;
     color: #FFF;
 }
@@ -37,6 +37,11 @@ body {
     width: 300px;
     cursor: pointer;
     font-size: large;
+    font-family: inherit;
+}
+
+.linux-button:hover {
+    background-color: #ddf16b;
 }
 
 .windows-button {
@@ -48,6 +53,13 @@ body {
     width: 300px;
     cursor: pointer;
     font-size: large;
+    font-family: inherit;
+    
+    
+}
+
+.windows-button:hover {
+    background-color: #6bcbf1;
 }
 
 .images {
@@ -71,26 +83,31 @@ body {
 }
 
 .ubuntu{
-    background-color: #f88b24;
+    background-color: #e6f59480;
 }
 
 .arch {
-    background-color: #8bcdff;
+    background-color: #c3f0b660;
 }
 
 .fedora {
-    background-color: #55a2dd;
+    background-color: #9edba888;
 }
 
 .windows-script {
     float: left;
-    padding: 10px;
     border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    background-color: #0074CC;
-    color: #FFF;
+    background-color: #237dc25d;
+    border: 1px solid rgb(2, 0, 128); 
+    color: white; 
+    padding: 10px 24px; 
+    cursor: pointer; 
+    float: left; 
+    font-family: inherit;
 }
+.windows-script:hover {
+    background-color: #3e828e;
+  }
 
 .file-span {
     margin-left: 10px;
@@ -114,3 +131,28 @@ body {
     background-color: rgba(120,150,200, 0.3);
     
 }
+
+.btn-group button {
+
+    border: 1px solid green; 
+    color: white; 
+    padding: 10px 24px; 
+    cursor: pointer; 
+    float: left; 
+    font-family: inherit;
+  }
+  
+  .btn-group button:not(:last-child) {
+    border-right: none; 
+  }
+  
+  
+  .btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .btn-group button:hover {
+    background-color: #3e8e41;
+  }
