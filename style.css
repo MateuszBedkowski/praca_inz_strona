@@ -156,3 +156,34 @@ body {
   .btn-group button:hover {
     background-color: #3e8e41;
   }
+
+  .command-container {
+    position: relative;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: #e0e0e0;
+    color: #2c2c2c;
+    border-radius: 8px;
+    font-family: monospace;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.command-container.dark {
+    background-color: #2c2c2c;
+    color: #e0e0e0;
+}
+
+.copy-button {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    font-size: 1.5rem;
+    color: #888;
+    transition: color 0.3s;
+}
+
+.copy-button:hover {
+    color: #555;
+}

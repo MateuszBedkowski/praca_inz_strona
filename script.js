@@ -7,3 +7,9 @@ function copyToClipboard(textToCopy) {
     document.body.removeChild(textArea);
     alert('Skopiowano do schowka: ' + textToCopy);
 }
+
+function copyCommand(command) {
+    navigator.clipboard.writeText(command).catch(function(err) {
+        console.error('Could not copy text: ', err);
+    });
+}

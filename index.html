@@ -26,31 +26,51 @@
             <a href="./Files/linux">
                 <button class="linux-button">&#128039; <span class="file-span">Pobierz plik</span></button>
             </a>
-            <h2>Instrukcje dla Linux</h2>
+            <h2>Instructions for Linux</h2>
             <div class="linux-instructions">
-                <p>Zanim uruchomisz plik pobierz i uruchom odpowiedni skrypt, który przygotuje środowisko, a następnie
-                    wykona pobrany plik.</p>
-                <p>Instrukcja:</p>
+                <p>You need to prepare your device in order to run VulnAgent - follow below steps in order.</p>
                 <ol>
-                    <li>Pobierz plik &#128039;</li>
-                    <li>Pobierz odpowiedni skrypt</li>
-                    <li>Uruchom skrypt</li>
+                    <h2>Prepare system - update packages and install required modules</h2>
+                    <p>Debian / Ubuntu:</p>
+                    <div class="command-container">
+                        sudo apt update && sudo apt upgrade
+                        <button class="copy-button" onclick="copyCommand('sudo apt update && sudo apt upgrade')" title="Copy Text">
+                            📋
+                        </button>
+                    </div>
+                    <div class="command-container">
+                        sudo apt install python3-tk
+                        <button class="copy-button" onclick="copyCommand('sudo apt install python3-tk')" title="Copy Text">
+                            📋
+                        </button>
+                    </div>
+                    <p>Fedora:</p>
+                    <div class="command-container">
+                        sudo dnf update
+                        <button class="copy-button" onclick="copyCommand('sudo dnf update')" title="Copy Text">
+                            📋
+                        </button>
+                    </div>
+                    <div class="command-container">
+                        sudo dnf install python3-tkinter
+                        <button class="copy-button" onclick="copyCommand('sudo dnf install tk')" title="Copy Text">
+                            📋
+                        </button>
+                    </div>
+                    <p>Arch:</p>
+                    <div class="command-container">
+                        sudo pacman -Syu
+                        <button class="copy-button" onclick="copyCommand('sudo pacman -Syu')" title="Copy Text">
+                            📋
+                        </button>
+                    </div>
+                    <div class="command-container">
+                        sudo pacman -S tk
+                        <button class="copy-button" onclick="copyCommand('sudo pacman -S tk')" title="Copy Text">
+                            📋
+                        </button>
+                    </div>
                 </ol>
-            
-                <div class="btn-group" style="width:100%">
-                    
-                    <a href="/Files/ubuntu_debian.sh">
-                        <button class="linux-script ubuntu">Pobierz skrypt <br> Ubuntu/Debian </button>
-                    </a>
-                    
-                    <a href="/Files/arch.sh">
-                        <button class="linux-script arch">Pobierz skrypt <br> Arch </button>
-                    </a>
-                    
-                    <a href="/Files/fedora.sh">
-                        <button class="linux-script fedora">Pobierz skrypt <br> Fedora </button>
-                    </a>
-                  </div>
             </div>
         </div>
         <div class="windows">
@@ -68,9 +88,6 @@
                     <li>Pobierz skrypt</li>
                     <li>Uruchom skrypt</li>
                 </ol>
-                <a href="./Files/windows.ps1">
-                    <button class="windows-script"> Pobierz skrypt <br> Windows </button>
-                </a>
             </div>
         </div>
     </div>
