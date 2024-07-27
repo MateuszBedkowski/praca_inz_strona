@@ -23,12 +23,12 @@
     </div>
     <div class="container">
         <div class="linux">
-            <a href="./Files/VulnAgent.bin">
-                <button class="linux-button">&#128039; <span class="file-span">Download File (Linux)</span></button>
+            <a href="./Files/linux">
+                <button class="linux-button">&#128039; <span class="file-span">Download VulnAgent (Linux)</span></button>
             </a>
             <h2>Instructions for Linux</h2>
             <div class="linux-instructions">
-                <h3>In order to run VulnAgent you must have Python3 installed on you machine</h3>
+                <h3>In order to run VulnAgent you must have Python3 installed on your machine</h3>
                 <p>Run below command to check if you have Python3 installed:</p>
                 <div class="command-container">
                     python3 --version
@@ -83,16 +83,28 @@
                         </button>
                     </div>
                 </ol>
-                <h3>Now you can download and run VulnAgent</h3>
+                <h3>Now you have to download VulnAgent and add permissions to allow execution and then execute it:</h3>
+                <div class="command-container">
+                    chmod +x VulnAgent.bin
+                    <button class="copy-button" onclick="copyCommand('chmod +x VulnAgent.bin')" title="Copy Text">
+                        📋
+                    </button>
+                </div>
+                <div class="command-container">
+                    ./VulnAgent.bin
+                    <button class="copy-button" onclick="copyCommand('./VulnAgent.bin')" title="Copy Text">
+                        📋
+                    </button>
+                </div>
             </div>
         </div>
         <div class="windows">
             <a href="./Files/windows.exe">
-                <button class="windows-button" download>&#128187; <span class="file-span">Download File (Windows)</span></button>
+                <button class="windows-button" download>&#128187; <span class="file-span">Download VulnAgent (Windows)</span></button>
             </a>
             <h2>Instructions for Windows</h2>
             <div class="windows-instructions">
-                <h3>In order to run VulnAgent you must have Python3 installed on you machine</h3>
+                <h3>In order to run VulnAgent you must have Python3 installed on your machine</h3>
                 <p>Run below command to check if you have Python3 installed:</p>
                 <div class="command-container">
                     python --version
@@ -116,13 +128,7 @@
                         </button>
                     </div>
                 </ol>
-                <h3>Now you can download and run VulnAgent:</h3>
-                <div class="command-container">
-                    chmod +x VulnAgent.bin
-                    <button class="copy-button" onclick="copyCommand('chmod +x VulnAgent.bin')" title="Copy Text">
-                        📋
-                    </button>
-                </div>
+                <h3>Now you can download and run VulnAgent</h3>
             </div>
         </div>
     </div>
