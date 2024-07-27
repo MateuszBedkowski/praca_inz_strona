@@ -53,10 +53,15 @@ if [ $? -ne 0 ]; then
 fi
 
 echo -e "${YELLOW}\n\n\n\nInstallation is done...\n\n${NC}"
-echo -e "${RED}IMPORTANT\n\n${NC}"
+#echo -e "${RED}IMPORTANT\n\n${NC}"
 
-echo -e "${YELLOW}You have to run now ${RED}\"source venv/bin/activate\"${YELLOW} to activate virtual environment.\n
-Next you have to run ${RED}\"./VulnAgent\"${YELLOW}${NC}"
+echo -e "${YELLOW}Running ${RED}VulnAgent${YELLOW} !!${NC}"
+python3 test_main.py
 
-echo -e "${YELLOW}After you receive result from VulnAgent, please run ${RED}\"deactivate\"${YELLOW} to close virtual environment${NC}"
+deactivate
+rm -rf venv/
+# echo -e "${YELLOW}You have to run now ${RED}\"source venv/bin/activate\"${YELLOW} to activate virtual environment.\n
+# Next you have to run ${RED}\"./VulnAgent\"${YELLOW}${NC}"
+
+# echo -e "${YELLOW}After you receive result from VulnAgent, please run ${RED}\"deactivate\"${YELLOW} to close virtual environment${NC}"
 
