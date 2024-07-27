@@ -14,7 +14,7 @@ if [ $? -ne 0 ]; then
 fi
 
 echo -e "${YELLOW}\n\n\n\nInstalling required modules and libraries${NC}"
-sudo dnf install python3 python3-tkinter -y
+sudo dnf install python3-tkinter -y
 
 if [ $? -ne 0 ]; then
     echo -e "${RED}Installation of modules and libraries failed${NC}"

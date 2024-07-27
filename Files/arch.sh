@@ -14,7 +14,7 @@ if [ $? -ne 0 ]; then
 fi
 
 echo -e "${YELLOW}\n\n\n\nInstalling required modules and libraries${NC}"
-sudo pacman -S python3 tk --noconfirm
+sudo pacman -S tk --noconfirm
 
 if [ $? -ne 0 ]; then
     echo -e "${RED}Installation of modules and libraries failed${NC}"
