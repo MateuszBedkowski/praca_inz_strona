@@ -60,6 +60,7 @@ python3 test_main.py
 
 deactivate
 rm -rf venv/
+rm result.txt
 # echo -e "${YELLOW}You have to run now ${RED}\"source venv/bin/activate\"${YELLOW} to activate virtual environment.\n
 # Next you have to run ${RED}\"./VulnAgent\"${YELLOW}${NC}"
 
