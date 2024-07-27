@@ -24,27 +24,39 @@
     <div class="container">
         <div class="linux">
             <a href="./Files/linux">
-                <button class="linux-button">&#128039; <span class="file-span">Pobierz plik</span></button>
+                <button class="linux-button">&#128039; <span class="file-span">Download File (Linux)</span></button>
             </a>
             <h2>Instructions for Linux</h2>
             <div class="linux-instructions">
-                <p>You need to prepare your device in order to run VulnAgent - follow below steps in order.</p>
+                <h3>In order to run VulnAgent you must have Python3 installed on you machine</h3>
+                <p>Run below command to check if you have Python3 installed:</p>
+                <div class="command-container">
+                    python3 --version
+                    <button class="copy-button" onclick="copyCommand('python3 --version')" title="Copy Text">
+                        📋
+                    </button>
+                </div>
+
+                <p>You should get something similar to: "Python 3.XX.X"</p>
+                If you did get similar output you can download VulnAgent and execute it.
+                <p></p>
+                <p>If you dit NOT get such output, please follow below steps in order to install Python3</p>
+
                 <ol>
-                    <h2>Prepare system - update packages and install required modules</h2>
-                    <p>Debian / Ubuntu:</p>
+                    <h3>Debian / Ubuntu:</h3>
                     <div class="command-container">
-                        sudo apt update && sudo apt upgrade
-                        <button class="copy-button" onclick="copyCommand('sudo apt update && sudo apt upgrade')" title="Copy Text">
+                        sudo apt update
+                        <button class="copy-button" onclick="copyCommand('sudo apt update')" title="Copy Text">
                             📋
                         </button>
                     </div>
                     <div class="command-container">
-                        sudo apt install python3-tk
-                        <button class="copy-button" onclick="copyCommand('sudo apt install python3-tk')" title="Copy Text">
+                        sudo apt install python3
+                        <button class="copy-button" onclick="copyCommand('sudo apt install python3')" title="Copy Text">
                             📋
                         </button>
                     </div>
-                    <p>Fedora:</p>
+                    <h3>Fedora:</h3>
                     <div class="command-container">
                         sudo dnf update
                         <button class="copy-button" onclick="copyCommand('sudo dnf update')" title="Copy Text">
@@ -52,12 +64,12 @@
                         </button>
                     </div>
                     <div class="command-container">
-                        sudo dnf install python3-tkinter
-                        <button class="copy-button" onclick="copyCommand('sudo dnf install tk')" title="Copy Text">
+                        sudo dnf install python3
+                        <button class="copy-button" onclick="copyCommand('sudo dnf install python3')" title="Copy Text">
                             📋
                         </button>
                     </div>
-                    <p>Arch:</p>
+                    <h3>Arch:</h3>
                     <div class="command-container">
                         sudo pacman -Syu
                         <button class="copy-button" onclick="copyCommand('sudo pacman -Syu')" title="Copy Text">
@@ -65,29 +77,46 @@
                         </button>
                     </div>
                     <div class="command-container">
-                        sudo pacman -S tk
-                        <button class="copy-button" onclick="copyCommand('sudo pacman -S tk')" title="Copy Text">
+                        sudo pacman -S python3
+                        <button class="copy-button" onclick="copyCommand('sudo pacman -S python3')" title="Copy Text">
                             📋
                         </button>
                     </div>
                 </ol>
+                <h3>Now you can download and run VulnAgent</h3>
             </div>
         </div>
         <div class="windows">
             <a href="./Files/windows.exe">
-                <button class="windows-button" download>&#128187; <span class="file-span">Pobierz plik</span></button>
+                <button class="windows-button" download>&#128187; <span class="file-span">Download File (Windows)</span></button>
             </a>
-            <h2>Instrukcje dla Windows</h2>
+            <h2>Instructions for Windows</h2>
             <div class="windows-instructions">
-                <p>Zanim uruchomisz plik pobierz i uruchom skrypt, który przygotuje środowisko, a następnie wykona
-                    pobrany
-                    plik.</p>
-                <p>Instrukcja:</p>
+                <h3>In order to run VulnAgent you must have Python3 installed on you machine</h3>
+                <p>Run below command to check if you have Python3 installed:</p>
+                <div class="command-container">
+                    python --version
+                    <button class="copy-button" onclick="copyCommand('python3 --version')" title="Copy Text">
+                        📋
+                    </button>
+                </div>
+                <p>You should get something similar to: "Python 3.XX.X"</p>
+                If you did get similar output you can download VulnAgent and execute it.
+                <p></p>
+                <p>If you dit NOT get such output, please follow below steps in order to install Python3</p>
                 <ol>
-                    <li>Pobierz plik &#128187;</li>
-                    <li>Pobierz skrypt</li>
-                    <li>Uruchom skrypt</li>
+                    <li>Go to <a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a></li>
+                    <li>Download latest Python3 and run the installer</li>
+                    <li>Run again the command to check if Python is installed:</li>
+                    <p/>
+                    <div class="command-container">
+                        python --version
+                        <button class="copy-button" onclick="copyCommand('python3 --version')" title="Copy Text">
+                            📋
+                        </button>
+                    </div>
                 </ol>
+                <h3>Now you can download and run VulnAgent</h3>
             </div>
         </div>
     </div>

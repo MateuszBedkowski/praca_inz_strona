@@ -34,7 +34,7 @@ body {
     padding: 20px;
     border-radius: 5px;
     border: none;
-    width: 300px;
+    width: 100%;
     cursor: pointer;
     font-size: large;
     font-family: inherit;
@@ -50,7 +50,7 @@ body {
     padding: 20px;
     border-radius: 5px;
     border: none;
-    width: 300px;
+    width: 100%;
     cursor: pointer;
     font-size: large;
     font-family: inherit;
@@ -186,4 +186,8 @@ body {
 
 .copy-button:hover {
     color: #555;
+}
+
+a {
+    color: yellow;
 }
