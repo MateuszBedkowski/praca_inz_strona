@@ -1,15 +1,18 @@
-function copyToClipboard(textToCopy) {
-    const textArea = document.createElement('textarea');
-    textArea.value = textToCopy;
-    document.body.appendChild(textArea);
-    textArea.select();
-    document.execCommand("copy");
-    document.body.removeChild(textArea);
-    alert('Skopiowano do schowka: ' + textToCopy);
+function showTab(tabName) {
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach(tab => tab.classList.remove('active'));
+    contents.forEach(content => content.classList.remove('active'));
+
+    document.querySelector(`#${tabName}`).classList.add('active');
+    document.querySelector(`.tab[onclick="showTab('${tabName}')"]`).classList.add('active');
 }
 
 function copyCommand(command) {
-    navigator.clipboard.writeText(command).catch(function(err) {
-        console.error('Could not copy text: ', err);
+    navigator.clipboard.writeText(command).then(() => {
+        alert('Command copied: ' + command);
+    }).catch(err => {
+        console.error('Failed to copy command: ', err);
     });
 }

@@ -6,14 +6,13 @@
     <title>VulnAgent</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
-    <style>
-    body {
-      font-family: "Audiowide", sans-serif;
-    }
-    </style>
 </head>
 
 <body>
+    <div class="logo">
+        <img src="./Resources/logo1.jpg" alt="Failed to load VulnAgent logo">
+        <img src="./Resources/logo3.jpg" alt="Failed to load VulnAgent logo">
+    </div>
     <div class="photos">
         <img src="./Resources/arch-logo.png" class="images" alt="Failed to load arch logo">
         <img src="./Resources/ubuntu-logo.png" class="images" alt="Failed to load ubuntu logo">
@@ -21,15 +20,21 @@
         <img src="./Resources/fedora-logo.png" class="images" alt="Failed to load fedora logo">
         <img src="./Resources/windows-logo.png" class="images" alt="Failed to load windows logo">
     </div>
+
+    <div class="tabs">
+        <button class="tab active" onclick="showTab('linux')">Linux</button>
+        <button class="tab" onclick="showTab('windows')">Windows</button>
+    </div>
+
     <div class="container">
-        <div class="linux">
+        <div id="linux" class="tab-content active">
             <a href="./Files/VulnAgent.bin">
                 <button class="linux-button">&#128039; <span class="file-span">Download VulnAgent (Linux)</span></button>
             </a>
             <h2>Instructions for Linux</h2>
             <div class="linux-instructions">
                 <h3>In order to run VulnAgent you must have Python3 installed on your machine</h3>
-                <p>Run below command to check if you have Python3 installed:</p>
+                <p>Run the below command to check if you have Python3 installed:</p>
                 <div class="command-container">
                     python3 --version
                     <button class="copy-button" onclick="copyCommand('python3 --version')" title="Copy Text">
@@ -38,9 +43,7 @@
                 </div>
 
                 <p>You should get something similar to: "Python 3.XX.X"</p>
-                If you did get similar output you can download VulnAgent and execute it.
-                <p></p>
-                <p>If you dit NOT get such output, please follow below steps in order to install Python3</p>
+                <p>If you got similar output, you can download VulnAgent and execute it. If you did NOT get such output, follow the steps below to install Python3:</p>
 
                 <ol>
                     <h3>Debian / Ubuntu:</h3>
@@ -56,6 +59,7 @@
                             📋
                         </button>
                     </div>
+
                     <h3>Fedora:</h3>
                     <div class="command-container">
                         sudo dnf update
@@ -69,6 +73,7 @@
                             📋
                         </button>
                     </div>
+
                     <h3>Arch:</h3>
                     <div class="command-container">
                         sudo pacman -Syu
@@ -83,7 +88,8 @@
                         </button>
                     </div>
                 </ol>
-                <h3>Now you have to download VulnAgent and add permissions to allow execution and then execute it:</h3>
+
+                <h3>Now you have to download VulnAgent, add execution permissions, and run it:</h3>
                 <div class="command-container">
                     chmod +x VulnAgent.bin
                     <button class="copy-button" onclick="copyCommand('chmod +x VulnAgent.bin')" title="Copy Text">
@@ -98,40 +104,40 @@
                 </div>
             </div>
         </div>
-        <div class="windows">
+
+        <div id="windows" class="tab-content">
             <a href="./Files/VulnAgent.exe">
-                <button class="windows-button" download>&#128187; <span class="file-span">Download VulnAgent (Windows)</span></button>
+                <button class="windows-button">&#128187; <span class="file-span">Download VulnAgent (Windows)</span></button>
             </a>
             <h2>Instructions for Windows</h2>
             <div class="windows-instructions">
                 <h3>In order to run VulnAgent you must have Python3 installed on your machine</h3>
-                <p>Run below command to check if you have Python3 installed:</p>
+                <p>Run the below command to check if you have Python3 installed:</p>
                 <div class="command-container">
                     python --version
-                    <button class="copy-button" onclick="copyCommand('python3 --version')" title="Copy Text">
+                    <button class="copy-button" onclick="copyCommand('python --version')" title="Copy Text">
                         📋
                     </button>
                 </div>
+
                 <p>You should get something similar to: "Python 3.XX.X"</p>
-                If you did get similar output you can download VulnAgent and execute it.
-                <p></p>
-                <p>If you dit NOT get such output, please follow below steps in order to install Python3</p>
+                <p>If you got similar output, you can download VulnAgent and execute it. If you did NOT get such output, follow the steps below to install Python3:</p>
+
                 <ol>
                     <li>Go to <a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a></li>
-                    <li>Download latest Python3 and run the installer</li>
-                    <li>Run again the command to check if Python is installed:</li>
-                    <p/>
+                    <li>Download the latest Python3 installer and run it</li>
+                    <li>Run the command again to check if Python is installed:</li>
                     <div class="command-container">
                         python --version
-                        <button class="copy-button" onclick="copyCommand('python3 --version')" title="Copy Text">
+                        <button class="copy-button" onclick="copyCommand('python --version')" title="Copy Text">
                             📋
                         </button>
                     </div>
                 </ol>
-                <h3>Now you can download and run VulnAgent</h3>
             </div>
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 
