@@ -10,23 +10,13 @@
 
 <body>
     <div class="logo">
-        <img src="./Resources/logo_for_linux.jpg" alt="Failed to load VulnAgent logo">
-        <img src="./Resources/logo_for_windows.jpg" alt="Failed to load VulnAgent logo">
-    </div>
-    <div class="photos">
-        <img src="./Resources/arch-logo.png" class="images" alt="Failed to load arch logo">
-        <img src="./Resources/ubuntu-logo.png" class="images" alt="Failed to load ubuntu logo">
-        <img src="./Resources/debian-logo.png" class="images" alt="Failed to load debian logo">
-        <img src="./Resources/fedora-logo.png" class="images" alt="Failed to load fedora logo">
-        <img src="./Resources/windows-logo.png" class="images" alt="Failed to load windows logo">
+        <img id="logo-linux" src="./Resources/logo_for_linux.jpg" alt="Failed to load VulnAgent logo">
+        <img id="logo-windows" src="./Resources/logo_for_windows.jpg" alt="Failed to load VulnAgent logo">
     </div>
 
-    <div class="tabs">
-        <button class="tab active" onclick="showTab('linux')">Linux</button>
-        <button class="tab" onclick="showTab('windows')">Windows</button>
-    </div>
-
+    <!-- Overlays for Linux and Windows instructions -->
     <div class="container">
+        <!-- The Linux instructions div -->
         <div id="linux" class="tab-content active">
             <a href="./Files/VulnAgent.bin">
                 <button class="linux-button">&#128039; <span class="file-span">Download VulnAgent (Linux)</span></button>

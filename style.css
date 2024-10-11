@@ -73,8 +73,6 @@ body {
     padding: 20px 50px 0px 50px;
 }
 
-
-
 .linux-button,
 .windows-button {
     width: 100%;
@@ -154,3 +152,81 @@ body {
 a {
     color: yellow;
 }
+
+/* Flip animation */
+@keyframes flip {
+    from {
+        transform: rotateY(0);
+    }
+    to {
+        transform: rotateY(180deg);
+    }
+}
+
+/* Initial styles for flipped images */
+.flip {
+    transform: rotateY(0);
+    transition: transform 0.6s;
+}
+
+.flipped {
+    transform: rotateY(180deg);
+}
+
+/* Make the tab content initially hidden and overlay it on the logos */
+.tab-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    width: 50%; /* Same width as the logos */
+    height: 50%; /* Same height as the logos */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Default fallback background */
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    color: white;
+    border-radius: 5px;
+    z-index: 2; /* Appear on top of the logo */
+    text-align: center;
+}
+
+/* Specific background color for Linux and Windows content */
+#linux {
+    background-color: rgba(68, 204, 68, 0.9); /* Matching Linux logo background */
+}
+
+#windows {
+    background-color: rgba(0, 116, 204, 0.9); /* Matching Windows logo background */
+}
+
+/* When active (after flip), show the tab content */
+.tab-content.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Logo styles */
+.logo {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px;
+    cursor: pointer;
+    position: relative; /* So that the instructions can overlay */
+    z-index: 1; /* Lower z-index to let instructions appear on top */
+}
+
+.logo img {
+    flex-shrink: 1;
+    max-width: 50%;
+    margin-right: 10px;
+    transition: transform 0.6s ease-in-out;
+}
+
+.logo img:last-child {
+    margin-right: 0;
+}
+
