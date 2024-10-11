@@ -171,13 +171,9 @@ a {
         opacity: 0;
         transform: rotateY(-90deg); /* Starting state hidden and rotated */
     }
-    50% {
-        opacity: 0.5;
-        transform: rotateY(-45deg); /* Partially visible at 50% of flip */
-    }
     100% {
         opacity: 1;
-        transform: rotateY(0); /* Fully visible and aligned */
+        transform: rotateY(0); /* Partially visible at 50% of flip */
     }
 }
 
@@ -244,4 +240,3 @@ a {
 .logo img:last-child {
     margin-right: 0;
 }
-
