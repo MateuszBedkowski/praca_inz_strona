@@ -21,8 +21,8 @@ body {
 
 .logo-wrapper {
     position: relative;
-    width: 100%; /* Set a specific width for logos */
-    height: 100%; /* Make sure both logos have consistent sizes */
+    width: 100%;
+    height: 100%;
     margin: 20px;
     cursor: pointer;
     display: flex;
