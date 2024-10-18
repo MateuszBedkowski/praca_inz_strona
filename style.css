@@ -14,14 +14,14 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 80%;
+    width: 90%;
     max-width: 100%;
     margin: auto;
 }
 
 .logo-wrapper {
     position: relative;
-    width: 50%; /* Set a specific width for logos */
+    width: 100%; /* Set a specific width for logos */
     height: 100%; /* Make sure both logos have consistent sizes */
     margin: 20px;
     cursor: pointer;
