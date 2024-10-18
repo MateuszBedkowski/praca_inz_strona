@@ -2,81 +2,74 @@ body {
     background: url("./Resources/background.jpg");
     font-family: Arial, sans-serif;
     color: #FFF;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .container {
-    width: 100%;
-    margin-top: 50px;
-    margin-bottom: 20px;
-    padding: 20px 0px 0px 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    max-width: 100%;
+    margin: auto;
 }
 
-.tabs {
+.logo-wrapper {
+    position: relative;
+    width: 50%; /* Set a specific width for logos */
+    height: 100%; /* Make sure both logos have consistent sizes */
+    margin: 20px;
+    cursor: pointer;
     display: flex;
     justify-content: center;
-    margin-top: 50px;
-    margin-bottom: 20px;
+    align-items: center;
 }
 
-.tab {
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-    border: none;
-    outline: none;
-    font-size: 16px;
-    cursor: pointer;
-    margin: 0 10px;
-}
-
-.logo {
-    max-width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 20px; 
-}
-
-.logo img {
-    flex-shrink: 1;
-    max-width: 50%;
-    margin-right: 10px;
-}
-
-.logo img:last-child {
-    margin-right: 10px;
-}
-
-.tab.active {
-    background-color: #555;
+.logo-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .tab-content {
     display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-sizing: border-box;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+    overflow-y: auto;
 }
 
 .tab-content.active {
-    display: block;
-    width: 100%;
-}
-
-.photos {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 1;
 }
 
-.images {
-    width: 110px;
-    height: 110px;
-    padding: 20px 50px 0px 50px;
+.instructions {
+    text-align: left;
 }
 
-.linux-button,
-.windows-button {
+.linux-button, .windows-button {
     width: 100%;
-    padding: 20px;
+    padding: 15px;
     border-radius: 5px;
     border: none;
     cursor: pointer;
@@ -89,39 +82,11 @@ body {
     background-color: #44CC44;
 }
 
-.linux-button:hover {
-    background-color: #ddf16b;
-}
-
 .windows-button {
     background-color: #0074CC;
 }
 
-.windows-button:hover {
-    background-color: #6bcbf1;
-}
-
-.linux-instructions,
-.windows-instructions {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #b3b3b3;
-    padding: 20px;
-    border-radius: 5px;
-}
-
-.linux-instructions {
-    background-color: rgba(120, 150, 0, 0.8);
-}
-
-.windows-instructions {
-    background-color: rgba(120, 150, 200, 0.8);
-}
-
 .command-container {
-    position: relative;
-    margin-bottom: 1rem;
-    padding: 1rem;
     background-color: #e0e0e0;
     color: #2c2c2c;
     border-radius: 8px;
@@ -129,11 +94,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.command-container.dark {
-    background-color: #2c2c2c;
-    color: #e0e0e0;
+    padding: 10px;
+    margin-bottom: 10px;
 }
 
 .copy-button {
@@ -149,94 +111,7 @@ body {
     color: #555;
 }
 
-a {
-    color: yellow;
-}
-
-/* Flip animation */
-@keyframes flip {
-    0% {
-        transform: rotateY(0);
-    }
-    50% {
-        transform: rotateY(90deg);
-    }
-    100% {
-        transform: rotateY(180deg);
-    }
-}
-
-@keyframes showInstructions {
-    0% {
-        opacity: 0;
-        transform: rotateY(-90deg); /* Starting state hidden and rotated */
-    }
-    100% {
-        opacity: 1;
-        transform: rotateY(0); /* Partially visible at 50% of flip */
-    }
-}
-
-/* Initial styles for flipped images */
-.flip {
-    transform: rotateY(0);
-    transition: transform 0.6s;
-}
-
-.flipped {
-    transform: rotateY(180deg);
-}
-
-/* Make the tab content initially hidden and overlay it on the logos */
-.tab-content {
-    position: absolute;
-    top: 10;
-    left: 10;
-    transform: rotateY(-90deg); /* Start rotated */
+/* Hide the logo when instructions are active */
+.logo-wrapper img.hidden {
     opacity: 0;
-    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
-    background-color: rgba(0, 0, 0, 0.8); /* Default fallback background */
-    color: white;
-    border-radius: 5px;
-    z-index: 2;
-    text-align: center;
-}
-
-/* Active state with animation to show */
-.tab-content.active {
-    transform: rotateY(0deg); /* Rotate to 0deg when visible */
-    opacity: 1;
-}
-/* Specific background color for Linux and Windows content */
-#linux {
-    background-color: rgba(68, 204, 68, 0.9); /* Matching Linux logo background */
-}
-
-#windows {
-    background-color: rgba(0, 116, 204, 0.9); /* Matching Windows logo background */
-}
-
-
-
-/* Logo styles */
-.logo {
-    max-width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 20px;
-    cursor: pointer;
-    position: relative; /* So that the instructions can overlay */
-    z-index: 1; /* Lower z-index to let instructions appear on top */
-}
-
-.logo img {
-    flex-shrink: 1;
-    max-width: 50%;
-    margin-right: 10px;
-    transition: transform 0.6s ease-in-out;
-}
-
-.logo img:last-child {
-    margin-right: 0;
 }

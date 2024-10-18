@@ -1,14 +1,3 @@
-function showTab(tabName) {
-    const tabs = document.querySelectorAll('.tab');
-    const contents = document.querySelectorAll('.tab-content');
-
-    tabs.forEach(tab => tab.classList.remove('active'));
-    contents.forEach(content => content.classList.remove('active'));
-
-    document.querySelector(`#${tabName}`).classList.add('active');
-    document.querySelector(`.tab[onclick="showTab('${tabName}')"]`).classList.add('active');
-}
-
 function copyCommand(command) {
     navigator.clipboard.writeText(command).then(() => {
         alert('Command copied: ' + command);
@@ -19,44 +8,26 @@ function copyCommand(command) {
 
 document.getElementById("logo-linux").addEventListener("click", function () {
     const linuxLogo = document.getElementById("logo-linux");
-    const windowsLogo = document.getElementById("logo-windows");
     const linuxTab = document.getElementById("linux");
-    const windowsTab = document.getElementById("windows");
 
-    // Add flip effect to the Linux logo
-    linuxLogo.classList.toggle("flipped");
-
-    // If the Linux logo is flipped, start showing the instructions
-    if (linuxLogo.classList.contains("flipped")) {
-        setTimeout(() => {
-            linuxTab.classList.add("active");
-        }, 300); // Start at 50% of the 0.6s flip animation (300ms)
-        
-        windowsTab.classList.remove("active"); // Hide the windows content
-        windowsLogo.classList.remove("flipped"); // Reset windows flip
+    if (linuxLogo.classList.contains("hidden")) {
+        linuxLogo.classList.remove("hidden"); // Show the logo
+        linuxTab.classList.remove("active"); // Hide the instructions
     } else {
-        linuxTab.classList.remove("active");
+        linuxLogo.classList.add("hidden"); // Hide the logo
+        linuxTab.classList.add("active"); // Show the instructions
     }
 });
 
 document.getElementById("logo-windows").addEventListener("click", function () {
     const windowsLogo = document.getElementById("logo-windows");
-    const linuxLogo = document.getElementById("logo-linux");
     const windowsTab = document.getElementById("windows");
-    const linuxTab = document.getElementById("linux");
 
-    // Add flip effect to the Windows logo
-    windowsLogo.classList.toggle("flipped");
-
-    // If the Windows logo is flipped, start showing the instructions
-    if (windowsLogo.classList.contains("flipped")) {
-        setTimeout(() => {
-            windowsTab.classList.add("active");
-        }, 300); // Start at 50% of the 0.6s flip animation (300ms)
-        
-        linuxTab.classList.remove("active"); // Hide the Linux content
-        linuxLogo.classList.remove("flipped"); // Reset Linux flip
+    if (windowsLogo.classList.contains("hidden")) {
+        windowsLogo.classList.remove("hidden"); // Show the logo
+        windowsTab.classList.remove("active"); // Hide the instructions
     } else {
-        windowsTab.classList.remove("active");
+        windowsLogo.classList.add("hidden"); // Hide the logo
+        windowsTab.classList.add("active"); // Show the instructions
     }
 });
