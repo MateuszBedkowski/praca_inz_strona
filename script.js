@@ -30,10 +30,12 @@ document.getElementById("logo-windows").addEventListener("click", function () {
     toggleContent("logo-windows", "windows");
 });
 
-document.getElementById("linux").addEventListener("click", function () {
-    toggleContent("logo-linux", "linux");
-});
+/* Disabled below changes as they've made copying impossible to do in proper way */
 
-document.getElementById("windows").addEventListener("click", function () {
-    toggleContent("logo-windows", "windows");
-});
+// document.getElementById("linux").addEventListener("click", function () {
+//     toggleContent("logo-linux", "linux");
+// });
+
+// document.getElementById("windows").addEventListener("click", function () {
+//     toggleContent("logo-windows", "windows");
+// });
