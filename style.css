@@ -59,12 +59,14 @@ body {
 .tab-content.active {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start; /* Align instructions to start */
     opacity: 1;
 }
 
 .instructions {
     text-align: left;
+    width: 100%;
+    margin-top: 20px; /* Added margin to space it from the buttons */
 }
 
 .linux-button, .windows-button {
@@ -75,7 +77,7 @@ body {
     cursor: pointer;
     font-size: large;
     font-family: inherit;
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Consistent margin at the bottom */
 }
 
 .linux-button {

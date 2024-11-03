@@ -6,28 +6,34 @@ function copyCommand(command) {
     });
 }
 
-document.getElementById("logo-linux").addEventListener("click", function () {
-    const linuxLogo = document.getElementById("logo-linux");
-    const linuxTab = document.getElementById("linux");
+// Function to toggle the logo and instructions
+function toggleContent(logoId, tabId) {
+    const logo = document.getElementById(logoId);
+    const tab = document.getElementById(tabId);
 
-    if (linuxLogo.classList.contains("hidden")) {
-        linuxLogo.classList.remove("hidden"); // Show the logo
-        linuxTab.classList.remove("active"); // Hide the instructions
+    // Check if the logo is currently hidden
+    if (logo.classList.contains("hidden")) {
+        logo.classList.remove("hidden"); // Show the logo
+        tab.classList.remove("active"); // Hide the instructions
     } else {
-        linuxLogo.classList.add("hidden"); // Hide the logo
-        linuxTab.classList.add("active"); // Show the instructions
+        logo.classList.add("hidden"); // Hide the logo
+        tab.classList.add("active"); // Show the instructions
     }
+}
+
+// Add event listeners for both logos
+document.getElementById("logo-linux").addEventListener("click", function () {
+    toggleContent("logo-linux", "linux");
 });
 
 document.getElementById("logo-windows").addEventListener("click", function () {
-    const windowsLogo = document.getElementById("logo-windows");
-    const windowsTab = document.getElementById("windows");
+    toggleContent("logo-windows", "windows");
+});
 
-    if (windowsLogo.classList.contains("hidden")) {
-        windowsLogo.classList.remove("hidden"); // Show the logo
-        windowsTab.classList.remove("active"); // Hide the instructions
-    } else {
-        windowsLogo.classList.add("hidden"); // Hide the logo
-        windowsTab.classList.add("active"); // Show the instructions
-    }
+document.getElementById("linux").addEventListener("click", function () {
+    toggleContent("logo-linux", "linux");
+});
+
+document.getElementById("windows").addEventListener("click", function () {
+    toggleContent("logo-windows", "windows");
 });
