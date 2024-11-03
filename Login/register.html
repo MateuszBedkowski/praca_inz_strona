@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Register - VulnAgent</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="register_box">
+            <div class="register_header">
+                <span>Register</span>
+            </div>
+            <div class="input_box">
+                <input type="text" id="new_user" class="input-field" required>
+                <label for="new_user" class="label">Username</label>
+                <i class="bx bx-user icon"></i>
+            </div>
+            <div class="input_box">
+                <input type="password" id="new_pass" class="input-field" required>
+                <label for="new_pass" class="label">Password</label>
+                <i class="bx bx-lock-alt icon"></i>
+            </div>
+            <div class="input_box">
+                <input type="button" class="input_submit" value="Register" onclick="handleRegister()">
+            </div>
+            <div class="login">
+                <span>Already have an account? <a class="return_login" href="login.html" onclick="showLogin()">Login</a></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

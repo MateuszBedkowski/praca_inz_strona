@@ -1,0 +1,135 @@
+/* Reset some default styles for a clean slate */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light background color for better contrast */
+    height: 100vh; /* Make the body take the full viewport height */
+}
+
+.container {
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Arrange children vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: flex-start; /* Align items at the start (top) */
+    max-width: 800px; /* Limit the maximum width */
+    margin: 0 auto; /* Center the container on the page */
+    padding: 20px; /* Add padding around the container */
+    height: 100%; /* Make the container fill the available height */
+}
+
+.header {
+    margin: 0; /* Remove margin to position at the very top */
+}
+
+h1 {
+    color: #fff; /* Darker text color for readability */
+    margin-bottom: 100px; /* Space below the heading */
+}
+
+/* User list container */
+#user-list {
+    width: 100%; /* Make the user list take the full width of the container */
+    padding: 20px;
+    background-color: white; /* White background for the user list */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Style for each user entry */
+#user-list div {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Align items vertically centered */
+    justify-content: space-between; /* Distribute space evenly between items */
+    margin-bottom: 15px; /* Space between user entries */
+    padding: 10px; /* Padding inside each entry */
+    border: 1px solid #ddd; /* Light border for each entry */
+    border-radius: 5px; /* Rounded corners for entries */
+    background-color: #fafafa; /* Light grey background for entries */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+#user-list div:hover {
+    background-color: #e9ecef; /* Slightly darker background on hover */
+}
+
+/* Usernames style */
+#user-list span {
+    color: #333; /* Change username color to black */
+    font-weight: bold; /* Optional: make usernames bold */
+    flex: 1; /* Allow username to take available space */
+}
+
+/* Input styles */
+input[type="password"] {
+    margin-left: 10px; /* Space between username and input */
+    padding: 8px; /* Padding inside input */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+    width: 200px; /* Set a specific width for all password inputs */
+}
+
+/* Button styles */
+button {
+    margin-left: 10px; /* Space between buttons */
+    padding: 8px 12px; /* Padding for buttons */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners for buttons */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    background-color: #007bff; /* Primary color for buttons */
+    color: white; /* White text color for buttons */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Specific style for Remove User button */
+button.remove {
+    background-color: #dc3545; /* Red color for remove button */
+}
+
+button.remove:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+/* Style for the table if used */
+table {
+    width: 100%; /* Make the table take the full width of the container */
+    border-collapse: collapse; /* Collapse borders for a cleaner look */
+    margin-top: 20px; /* Space above the table */
+}
+
+th, td {
+    padding: 12px; /* Space around cell content */
+    text-align: left; /* Align text to the left */
+    border-bottom: 1px solid #ddd; /* Light grey line between rows */
+}
+
+th {
+    background-color: #007bff; /* Primary color for table header */
+    color: white; /* White text color for header */
+}
+
+tr:hover {
+    background-color: #f1f1f1; /* Change background color on hover */
+}
+
+.back-button {
+    position: fixed; /* Fixed positioning to place it in the viewport */
+    top: 10px; /* Distance from the top */
+    right: 10px; /* Distance from the right */
+    padding: 10px 15px; /* Padding for the button */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    background-color: #6c757d; /* Gray background */
+    color: white; /* White text color */
+    font-size: 16px; /* Increase font size */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.back-button:hover {
+    background-color: #5a6268; /* Darker gray on hover */
+}
