@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(response => response.json())
         .then(users => {
             const userList = document.getElementById('user-list');
-            userList.innerHTML = ''; // Clear the list
+            userList.innerHTML = '';
 
             users.forEach(user => {
                 const userDiv = document.createElement('div');
@@ -57,7 +57,7 @@ function removeUser(username) {
         .then(data => {
             if (data.success) {
                 alert('User removed successfully.');
-                location.reload(); // Reload the page to refresh the user list
+                location.reload();
             } else {
                 alert('Error removing user: ' + data.message);
             }

@@ -24,7 +24,7 @@ app.use('/Download', express.static(path.join(__dirname, 'Download')));
 
 // Redirect to login page by default
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'Login', 'login.html')); // Ensure this serves login.html
+    res.sendFile(path.join(__dirname, 'Login', 'login.html'));
 });
 
 // Login route
@@ -92,7 +92,7 @@ app.post('/change-password', (req, res) => {
     if (fs.existsSync(userFilePath)) {
         // Hash the new password and save it to the file
         bcrypt.hash(password, 10, (err, hashedPassword) => {
-            fs.writeFileSync(userFilePath, hashedPassword); // Update the password file
+            fs.writeFileSync(userFilePath, hashedPassword);
             res.json({ success: true });
         });
     } else {
@@ -106,7 +106,7 @@ app.post('/remove-user', (req, res) => {
     const userFilePath = path.join(__dirname, 'Users', `${username}.txt`);
 
     if (fs.existsSync(userFilePath)) {
-        fs.unlinkSync(userFilePath); // Delete the user file
+        fs.unlinkSync(userFilePath);
         res.json({ success: true });
     } else {
         res.json({ success: false, message: 'User not found.' });

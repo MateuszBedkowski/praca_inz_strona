@@ -70,13 +70,13 @@ document.getElementById("logo-windows").addEventListener("click", function () {
 });
 
 // Additional script to handle admin button visibility
-const currentUsername = sessionStorage.getItem('username'); // Retrieve username from session storage
+const currentUsername = sessionStorage.getItem('username');
 
 // Check if the current user is "mateusz"
 if (currentUsername === 'mateusz') {
-    document.getElementById('admin-button-container').style.display = 'block'; // Show the Admin button
+    document.getElementById('admin-button-container').style.display = 'block';
 }
 
 function showAdminPanel() {
-    window.location.href = 'admin.html'; // Redirect to admin panel when button is clicked
+    window.location.href = 'admin.html';
 }
